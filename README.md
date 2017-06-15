@@ -19,4 +19,4 @@ The augmentation part is same for both the codes, so you can simply copy paste t
 
 2.nir_rgb_segmentation_arc_2.py :: which corresponds to "LATE-FUSED CONVOLUTION MODEL" in the mentioned reference above
 
-3.The third architecute in the paper will soon be implemented
+3.The third architecute has been implemented but not yet tested | the model compiles perfectly | run time errors are possible. 
