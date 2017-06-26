@@ -145,16 +145,28 @@ def Segment_datagen(state_aug,file_path, rgb_args, nir_args, label_args, batch_s
         yield [data[0],data[1]],[labels]
 
 #ARGUMENTS FOR DATA_GENERATOR
-RGB_args = gen_args ('/home/vinay/Videos/freiburg_forest_annotated/train/rgb/','.jpg')
-NIR_args = gen_args ('/home/vinay/Videos/freiburg_forest_annotated/train/nir_color/','.png')
-Label_args = gen_args ('/home/vinay/Videos/freiburg_forest_annotated/train/GT_color/','.png')
+train_RGB_args = gen_args ('/home/krishna/freiburg_forest_dataset/train/rgb/','.jpg')
+train_NIR_args = gen_args ('/home/krishna/freiburg_forest_dataset/train/nir_color/','.png')
+train_Label_args = gen_args ('/home/krishna/freiburg_forest_dataset/train/GT_color/','.png')
 state_aug = aug_state() 
 
-generator = Segment_datagen(state_aug,
-    file_path = '/home/vinay/Videos/freiburg_forest_annotated/train/rgb/train.txt',
-    rgb_args = RGB_args,
-    nir_args = NIR_args,
-    label_args = Label_args,
+train_generator = Segment_datagen(state_aug,
+    file_path = '/home/krishna/freiburg_forest_dataset/train/train.txt',
+    rgb_args = train_RGB_args,
+    nir_args = train_NIR_args,
+    label_args = train_Label_args,
+    batch_size= 8,
+    input_size=input_dim)
+
+val_RGB_args = gen_args ('/home/krishna/freiburg_forest_dataset/valid/rgb/','.jpg')
+val_NIR_args = gen_args ('/home/krishna/freiburg_forest_dataset/valid/nir_color/','.png')
+val_Label_args = gen_args ('/home/krishna/freiburg_forest_dataset/valid/GT_color/','.png')
+
+val_generator = Segment_datagen(state_aug,
+    file_path = '/home/krishna/freiburg_forest_dataset/valid/valid.txt',
+    rgb_args = val_RGB_args,
+    nir_args = val_NIR_args,
+    label_args = val_Label_args,
     batch_size= 8,
     input_size=input_dim)
 
@@ -224,4 +236,4 @@ checkpoint = ModelCheckpoint("nir_rgb_segmentation_2.{epoch:02d}.hdf5", monitor=
 #early = EarlyStopping(monitor='val_acc', min_delta=0, patience=1, verbose=1, mode='auto')
 #haven't specified validation data directory yet
 
-model.fit_generator(generator,steps_per_epoch=2000,epochs=50, callbacks=[progbar,checkpoint""",early"""])
+model.fit_generator(train_generator,steps_per_epoch=2000,epochs=50, callbacks=[progbar,checkpoint], validation_data = val_generator, validation_steps = 500)
