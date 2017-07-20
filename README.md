@@ -27,7 +27,7 @@ Old Architecture without Augmentation & Dropout
 
 
 ### Architecture:
-![Alt text](/Misc/Arc.png)
+![Alt text](/Arc.png)
 Architecture Reference (first two models in this link): http://deepscene.cs.uni-freiburg.de/index.html
 
 ---
