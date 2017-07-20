@@ -27,6 +27,7 @@ Dataset Reference (Freiburg forest multimodal/spectral annotated): http://deepsc
 
 ### Training:
 Loss : Categorical Cross Entropy
+
 Optimizer : Stochastic gradient descent with lr = 0.008, momentum = 0.9, decay=1e-6
 
 ###### Note:
