@@ -1,27 +1,33 @@
 # MULTI MODAL DEEP LEARNING FOR SEMANTIC SEGMENTATION USING KERAS
-### Architecture:
-![Alt text](/Misc/Arc.png)
-Architecture Reference (first two models in this link): http://deepscene.cs.uni-freiburg.de/index.html
-### Dataset:
-![Alt text](/Ds.png)
+Keras implementation of Fully convolutional Network (FCN-32s)trained to predict semantically segmented images of forest like images with rgb & nir_color input images.
 
-Dataset Reference (Freiburg forest multimodal/spectral annotated): http://deepscene.cs.uni-freiburg.de/index.html#datasets
-
-
-The corresponding image files in both the RGB and NIR directories must have the same name and a text file containing all the image file names WITHOUT the extension (ex: imagename.jpg -> wrong || imagename -> correct).
-The path to the text file will be mentioned in the comments of the code.
-
-
-This following files in the repository ::
-
-1.Deepscene/nir_rgb_segmentation_arc_1.py :: ("CHANNEL-STACKING MODEL") 
-2.Deepscene/nir_rgb_segmentation_arc_2.py :: ("LATE-FUSION MODEL")
-3.Deepscene/nir_rgb_segmentation_arc_3.py :: ("Convoluted Mixture of Deep Experts (CMoDE) Model")
-
+> # Repo-MAP
+> This following files in the repository ::
+> 1.Deepscene/nir_rgb_segmentation_arc_1.py :: ("CHANNEL-STACKING MODEL") 
+> 2.Deepscene/nir_rgb_segmentation_arc_2.py :: ("LATE-FUSION MODEL")
+> 3.Deepscene/nir_rgb_segmentation_arc_3.py :: ("Convoluted Mixture of Deep Experts (CMoDE) Model")
 are the exact replicas of the architectures described in Deepscene website.
 
 The files:
 1.
+
+### Architecture:
+![Alt text](/Misc/Arc.png)
+Architecture Reference (first two models in this link): http://deepscene.cs.uni-freiburg.de/index.html
+
+### Dataset:
+![Alt text](/Ds.png)
+Dataset Reference (Freiburg forest multimodal/spectral annotated): http://deepscene.cs.uni-freiburg.de/index.html#datasets
+
+### Training:
+ Loss : Categorical Cross Entropy
+ Optimizer : Stochastic gradient descent with lr = 0.008, momentum = 0.9, decay=1e-6
+
+###### Note:
+The corresponding image files in both the RGB and NIR directories must have the same name and a text file containing all the image file names WITHOUT the extension (ex: imagename.jpg -> wrong || imagename -> correct).
+The path to the text file will be mentioned in the comments of the code.
+
+
 
 # NOTE:
 Data augmentation is not done in this code, but it is implemented in the NEXT FILE('nir_rgb_segmentation_arc_2.py').
