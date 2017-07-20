@@ -1,10 +1,13 @@
-MULTI MODAL DEEP LEARNING FOR SEMANTIC SEGMENTATION USING KERAS
-
+# MULTI MODAL DEEP LEARNING FOR SEMANTIC SEGMENTATION USING KERAS
+### Architecture:
+![Alt text](/Misc/Arc.png)
 Architecture Reference (first two models in this link): http://deepscene.cs.uni-freiburg.de/index.html
+### Dataset:
+![Alt text](/Ds.png)
 
 Dataset Reference (Freiburg forest multimodal/spectral annotated): http://deepscene.cs.uni-freiburg.de/index.html#datasets
 
-My project involves using Near Infrared and RGB modalities.
+
 The corresponding image files in both the RGB and NIR directories must have the same name and a text file containing all the image file names WITHOUT the extension (ex: imagename.jpg -> wrong || imagename -> correct).
 The path to the text file will be mentioned in the comments of the code.
 
