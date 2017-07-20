@@ -32,7 +32,7 @@ Architecture Reference (first two models in this link): http://deepscene.cs.uni-
 
 ---
 ### Dataset:
-![Alt text](/Ds.png)
+![Alt text](/DS.png)
 Dataset Reference (Freiburg forest multimodal/spectral annotated): http://deepscene.cs.uni-freiburg.de/index.html#datasets
 
 ---
