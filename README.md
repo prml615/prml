@@ -1,15 +1,16 @@
 # MULTI MODAL DEEP LEARNING FOR SEMANTIC SEGMENTATION USING KERAS
 Keras implementation of Fully convolutional Network (FCN-32s)trained to predict semantically segmented images of forest like images with rgb & nir_color input images.
 
-> # Repo-MAP
-> This following files in the repository ::
-> 1.Deepscene/nir_rgb_segmentation_arc_1.py :: ("CHANNEL-STACKING MODEL") 
-> 2.Deepscene/nir_rgb_segmentation_arc_2.py :: ("LATE-FUSION MODEL")
-> 3.Deepscene/nir_rgb_segmentation_arc_3.py :: ("Convoluted Mixture of Deep Experts (CMoDE) Model")
-are the exact replicas of the architectures described in Deepscene website.
+The Following list describes the files :
 
-The files:
-1.
+1. late_fusion_improveed.py            (late_fusion FCN TRAINING FILE, Augmentation= Yes, Dropout= Yes)
+2. late_fusion_improved_predict.py     (predict with improved architecture)
+3. late_fusion_improved_saved_model.hdf5 (Architecture & weights of improved model)
+4. late_fusion_old.py                  (late_fusion  FCN TRAINING FILE, Augmentation= No, Dropout= No)
+5. late_fusion_old_predict.py()        (predict with old architecture)
+6. late_fusion_improved_saved_model.hdf5 (Architecture & weights of old model)
+
+
 
 ### Architecture:
 ![Alt text](/Misc/Arc.png)
@@ -30,6 +31,21 @@ The path to the text file will be mentioned in the comments of the code.
 
 
 # NOTE:
+
+
+This following files in the repository ::
+
+1.Deepscene/nir_rgb_segmentation_arc_1.py :: ("CHANNEL-STACKING MODEL") 
+2.Deepscene/nir_rgb_segmentation_arc_2.py :: ("LATE-FUSION MODEL")
+3.Deepscene/nir_rgb_segmentation_arc_3.py :: ("Convoluted Mixture of Deep Experts (CMoDE) Model")
+
+are the exact replicas of the architectures described in Deepscene website.
+
+The files:
+1.
+
+
+
 Data augmentation is not done in this code, but it is implemented in the NEXT FILE('nir_rgb_segmentation_arc_2.py').
 The augmentation part is same for both the codes, so you can simply copy paste that part to this code if needed.
 
