@@ -21,8 +21,8 @@ Architecture Reference (first two models in this link): http://deepscene.cs.uni-
 Dataset Reference (Freiburg forest multimodal/spectral annotated): http://deepscene.cs.uni-freiburg.de/index.html#datasets
 
 ### Training:
- Loss : Categorical Cross Entropy
- Optimizer : Stochastic gradient descent with lr = 0.008, momentum = 0.9, decay=1e-6
+Loss : Categorical Cross Entropy
+Optimizer : Stochastic gradient descent with lr = 0.008, momentum = 0.9, decay=1e-6
 
 ###### Note:
 The corresponding image files in both the RGB and NIR directories must have the same name and a text file containing all the image file names WITHOUT the extension (ex: imagename.jpg -> wrong || imagename -> correct).
