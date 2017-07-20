@@ -3,9 +3,14 @@ Keras implementation of Fully convolutional Network (FCN-32s)trained to predict 
 
 The Following list describes the files :
 
+Improved Architecture with Augmentation & Dropout
+
 1. late_fusion_improveed.py            (late_fusion FCN TRAINING FILE, Augmentation= Yes, Dropout= Yes)
 2. late_fusion_improved_predict.py     (predict with improved architecture)
 3. late_fusion_improved_saved_model.hdf5 (Architecture & weights of improved model)
+
+Old Architecture without Augmentation & Dropout
+
 4. late_fusion_old.py                  (late_fusion  FCN TRAINING FILE, Augmentation= No, Dropout= No)
 5. late_fusion_old_predict.py()        (predict with old architecture)
 6. late_fusion_improved_saved_model.hdf5 (Architecture & weights of old model)
