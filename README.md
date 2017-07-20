@@ -1,6 +1,16 @@
 # Multimodal fully convolutional network for SEMANTIC SEGMENTATION using Keras.
 Keras implementation of Fully convolutional Network (FCN-32s)trained to predict semantically segmented images of forest like images with rgb & nir_color input images.
 
+###### Note:
+Do the following steps after you download the dataset before you proceed and train your models.
+
+1. run preprocess/process.sh         (renames images)
+2. run preprocess/text_file_gen.py   (generates txt files for train,val,test used in data generator)
+3. run preprocess/aug_gen.py         (generates augmented image files beforehand the training, dynamic augmentation in runtime is slow an often hangs the training process)
+
+
+
+
 The Following list describes the files :
 
 Improved Architecture with Augmentation & Dropout
@@ -30,12 +40,7 @@ Loss : Categorical Cross Entropy
 
 Optimizer : Stochastic gradient descent with lr = 0.008, momentum = 0.9, decay=1e-6
 
-###### Note:
-Do the following steps after you download the dataset
 
-1. run preprocess/process.sh         (renames images)
-2. run preprocess/text_file_gen.py   (generates txt files for train,val,test used in data generator)
-3. run preprocess/aug_gen.py         (generates augmented image files beforehand the training, dynamic augmentation in runtime is slow an often hangs the training process)
  
 
 
