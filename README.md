@@ -1,6 +1,6 @@
 # Multimodal fully convolutional network for SEMANTIC SEGMENTATION using Keras.
 Keras implementation of Fully convolutional Network (FCN-32s)trained to predict semantically segmented images of forest like images with rgb & nir_color input images.
-
+(check out the presentation @ https://docs.google.com/presentation/d/1z8-GeTXvSuVbcez8R6HOG1Tw_F3A-WETahQdTV38_uc/edit?usp=sharing)
 ---
 
 ###### Note:
@@ -29,8 +29,7 @@ Old Architecture without Augmentation & Dropout
 ### Architecture:
 ![Alt text](/Arc.png)
 Architecture Reference (first two models in this link): http://deepscene.cs.uni-freiburg.de/index.html
----
-### Dataset:
+
 ---
 ### Dataset:
 ![Alt text](/DS.png)
@@ -41,6 +40,8 @@ Dataset Reference (Freiburg forest multimodal/spectral annotated): http://deepsc
 Loss : Categorical Cross Entropy
 
 Optimizer : Stochastic gradient descent with lr = 0.008, momentum = 0.9, decay=1e-6
+---
+### Results:
 
 ---
 
