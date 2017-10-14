@@ -36,6 +36,10 @@ Architecture Reference (first two models in this link): http://deepscene.cs.uni-
 ![Alt text](/DS.png)
 Dataset Reference (Freiburg forest multimodal/spectral annotated): http://deepscene.cs.uni-freiburg.de/index.html#datasets
 
+Note:Since the dataset is too small the training will overfit. To overcome this and train a generalized classifier image augmentation is done.
+Images are transformed geometrically with a combination of transsformations and added to the dataset before training.
+![Alt text](/Aug.png)
+
 ---
 ### Training:
 Loss : Categorical Cross Entropy
@@ -44,7 +48,7 @@ Optimizer : Stochastic gradient descent with lr = 0.008, momentum = 0.9, decay=1
 
 ---
 ### Results:
-
+![Alt text](/Res.png)
 ---
 
 # NOTE:
