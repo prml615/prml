@@ -1,6 +1,7 @@
 # Multimodal fully convolutional network for SEMANTIC SEGMENTATION using Keras.
 Keras implementation of Fully convolutional Network (FCN-32s)trained to predict semantically segmented images of forest like images with rgb & nir_color input images.
 (check out the presentation @ https://docs.google.com/presentation/d/1z8-GeTXvSuVbcez8R6HOG1Tw_F3A-WETahQdTV38_uc/edit?usp=sharing)
+
 ---
 
 ###### Note:
